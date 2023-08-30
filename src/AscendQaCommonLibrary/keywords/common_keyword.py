@@ -16,6 +16,7 @@ import sys
 from PyPDF2 import PdfReader
 from AscendQaCommonLibrary.utils import ImageUtils
 from AscendQaCommonLibrary.utils import GeneralUtils
+from AscendQaCommonLibrary.utils import DateUtils
 # from AscendQaCommonLibrary.utils.GeneralUtils import GeneralUtils
 # from AscendQaCommonLibrary.utils.ImageUtils import ImageUtils
 
@@ -30,7 +31,8 @@ from ImapLibrary2 import ImapLibrary2
 # print(f"{keywords}")
 # BuiltIn().log_to_console(rand_letters)
 
-class common_keyword():
+class common_keyword(LibraryComponent):
+    @keyword
     def get_driver_instance(self):
         return BuiltIn().get_library_instance('SeleniumLibrary')
     

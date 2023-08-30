@@ -6,7 +6,7 @@ from .utils.JsonUtils import JsonUtils
 from .utils.AdbUtils import AdbUtils
 from .utils.AppiumUtils import AppiumUtils
 from robot.api.deco import keyword,not_keyword,library
-from .keywords import common_keyword
+from .keywords.common_keyword import common_keyword
 
 __version__ = VERSION
 

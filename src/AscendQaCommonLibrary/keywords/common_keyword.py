@@ -30,7 +30,7 @@ from ImapLibrary2 import ImapLibrary2
 # print(f"{keywords}")
 # BuiltIn().log_to_console(rand_letters)
 
-class common_keyword():
+class common_keyword(LibraryComponent):
     def get_driver_instance(self):
         return BuiltIn().get_library_instance('SeleniumLibrary')
     

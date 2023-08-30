@@ -114,7 +114,7 @@ class common_keyword(LibraryComponent):
 
             citizen_id = random_num + str(position_13)
         return citizen_id
-
+    @keyword
     def verify_two_numbers_equal(self,number1:int, number2:int):
         if number1 == number2:
             print(f"{number1} equal {number2}")
@@ -123,6 +123,7 @@ class common_keyword(LibraryComponent):
 
     # Get os platform 
     #     ...     \n either darwin (Mac) or window (Ex. Darwin -> darwin)
+    @keyword
     def get_os_platform(self):
         # BuiltIn().log_to_console(sys.platform())
         plat_form = platform.system()
@@ -134,12 +135,14 @@ class common_keyword(LibraryComponent):
     #     ...     \n Collapses redundant separators and up-level references.
     #     ...     \n Converts `/` to `\` on Windows.
     #     ...     \n Replaces initial ~ or ~user by that user's home directory.
+    @keyword
     def get_normalize_path(self,path):
         normal_path = os.path.normpath(path)
         return    normal_path
     
     # PDF should contain
     # Verify if pdf file contains expected message or not
+    @keyword
     def pdf_should_contain(self,pdf_path,message):
         path = self.get_normalize_path(pdf_path)
 
@@ -170,6 +173,7 @@ class common_keyword(LibraryComponent):
 #                                 ...     ${screen_screenshot}
 #                                 ...     ${threshold}
 #     [Return]    ${is_found_image}   ${xy}
+    @keyword
     def image_should_be_visible_on_screen(self,abs_expected_image_path,threshold=0.8):
         driver = self.get_driver_instance()
         current_time = BuiltIn().get_time('epoch')
@@ -189,6 +193,7 @@ class common_keyword(LibraryComponent):
     #\n `retry`  how many time to loop retry
     #\n `wait_time`  how many second to wait before start another retry
     #\n Current version is able to find new file when folder has more one file
+    @keyword
     def wait_until_download_is_completed(self,directory,retry=5,wait_time=2):
         list_of_existing_files = os.listdir(directory)
         total_number_of_existing_files = len(list_of_existing_files)
@@ -217,6 +222,7 @@ class common_keyword(LibraryComponent):
     #write new row at the end to excel file
     #\n ``row_data_as_a_list`` is a list of data represent number of colum in a row ex. ['1','10637','delivered']
     #\n ``excel_file_path`` absolute path to write the data into
+    @keyword
     def write_new_row_to_excel_file(self,row_data_as_a_list,excel_file_path):
         # ${date}=	DateTime.Get current date	result_format=epoch     exclude_millis=yes
         date = int(datetime.datetime.now())
@@ -234,6 +240,7 @@ class common_keyword(LibraryComponent):
     #     ...     \n reading column of all rows and expected at least 1 to match expected information
     #     ...     \n ``list_of_expected_information`` is a list contains contain expected information
     #     ...     \n ``column_to_read`` is an integer indicate column number to read
+    @keyword
     def column_in_excel_file_should_contains_correct_information(self,excel_file_path,list_of_expected_information,column_to_read):
         date = int(datetime.datetime.now())
         wb = load_workbook(excel_file_path,date)
@@ -247,6 +254,7 @@ class common_keyword(LibraryComponent):
     #     ...     \n reading column of all rows and expected all to match expected information
     #     ...     \n ``list_of_expected_information`` is a list contains contain expected information
     #     ...     \n ``column_to_read`` is an integer indicate column number to read
+    @keyword
     def column_in_exported_excel_file_should_exaclty_match(self,excel_file_path,list_of_expected_information,column_to_read):
         date = int(datetime.datetime.now())
         wb = load_workbook(excel_file_path,date)
@@ -259,6 +267,7 @@ class common_keyword(LibraryComponent):
     #     [Documentation]     get email body and link from any email providers using imaplibrary.
     #     ...     \n filter using sender address   
     #     ...     \n ``timeout`` how long in second you want to wait for the email
+    @keyword
     def get_body_and_link_from_email(self,email,password,sender_address,timeout=60):
         BuiltIn().wait_until_keyword_succeeds('40x','10s')
         ImapLibrary2().open_mailbox('imap.gmail.com',email,password)
@@ -279,6 +288,7 @@ class common_keyword(LibraryComponent):
     #     [Documentation]     get email body and link from any email providers using imaplibrary.
     #     ...     \n filter using sender address   
     #     ...     \n ``timeout`` how long in second you want to wait for the email
+    @keyword
     def get_body_and_link_from_email(self,email,password,sender_address,timeout=60):
         BuiltIn().wait_until_keyword_succeeds('40x','10s')
         ImapLibrary2().open_mailbox('imap.gmail.com',email,password)
@@ -300,6 +310,7 @@ class common_keyword(LibraryComponent):
     #[Documentation]     get email body from any email providers using imaplibrary.
     #     ...    \n filter using sender address
     #     ...    \n ``timeout`` how long in second you want to wait for the email
+    @keyword
     def get_email_body(self,email,password,sender_address,timeout=60):
         BuiltIn().wait_until_keyword_succeeds('40x','10s')
         ImapLibrary2().open_mailbox('imap.gmail.com',email,password)

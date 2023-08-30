@@ -1,11 +1,10 @@
 *** Settings ***
 Resource    ${CURDIR}/../imports.resource
-Library        AscendQaCommonLibrary
+
 *** Variables ***
 ${lo_btn}    xpath=//a[@id='CRO-Hero-Button']
 
 *** Test Cases ***
-# Log To console    ${CURDIR}
 # Test to Pass
 #     webKeywordlib.Verify two numbers equal by py            10    10
     # Verify two numbers equal by resource      10    10

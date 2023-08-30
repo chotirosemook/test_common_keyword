@@ -14,8 +14,8 @@ import platform
 import os.path
 import sys
 from PyPDF2 import PdfReader
-# from AscendQaCommonLibrary.utils import ImageUtils
-# from AscendQaCommonLibrary.utils import GeneralUtils
+from AscendQaCommonLibrary.utils import ImageUtils
+from AscendQaCommonLibrary.utils import GeneralUtils
 # from AscendQaCommonLibrary.utils.GeneralUtils import GeneralUtils
 # from AscendQaCommonLibrary.utils.ImageUtils import ImageUtils
 
@@ -158,10 +158,10 @@ class common_keyword():
         BuiltIn().should_contain(txt,message)
 
         # Image should be visible on screen   
-#     [Documentation]     Find image on current screen by comparing screenshot of current screen and expected image 
-#     ...     \n default threshold is 0.8 meaning 80% of 2 images should match 
+#     [Documentation]     Find image on current screen by comparing screenshot of current screen and expected image
+#     ...     \n default threshold is 0.8 meaning 80% of 2 images should match
 #     ...     \n Return true/false and xy of the expected image on screen if any
-#     ...     \n ``abs_expected_image_path`` is the absolute path of expected image 
+#     ...     \n ``abs_expected_image_path`` is the absolute path of expected image
 #     [Arguments]     ${abs_expected_image_path}   ${threshold}=0.8
 #     ${current_time}=            BuiltIn.Get time    epoch
 #     ${screen_screenshot}=       SeleniumLibrary.Capture Page Screenshot     ${OUTPUT_DIR}${/}screen_screenshot_${current_time}.png
@@ -170,7 +170,7 @@ class common_keyword():
 #                                 ...     ${screen_screenshot}
 #                                 ...     ${threshold}
 #     [Return]    ${is_found_image}   ${xy}
-    def image_should_be_visible_on_screen   (self,abs_expected_image_path,threshold=0.8):
+    def image_should_be_visible_on_screen(self,abs_expected_image_path,threshold=0.8):
         driver = self.get_driver_instance()
         current_time = BuiltIn().get_time('epoch')
         BuiltIn().log_to_console(current_time)
@@ -178,10 +178,10 @@ class common_keyword():
         BuiltIn().log_to_console(filename)
         screen_screenshot = driver.capture_page_screenshot(filename)
         # BuiltIn().log_to_console(screen_screenshot)
-        # is_found_image,xy= ImageUtils.image_should_be_visible_on_screen(abs_expected_image_path,screen_screenshot,threshold)
+        is_found_image,xy= ImageUtils.image_should_be_visible_on_screen(abs_expected_image_path,screen_screenshot,threshold)
         # BuiltIn().log_to_console(is_found_image)
         # BuiltIn().log_to_console(xy)
-        # return    is_found_image,xy
+        return    is_found_image,xy
 
     # Wait until download is completed
     #Verifies that the directory has one or more folder and it is not a temp file.

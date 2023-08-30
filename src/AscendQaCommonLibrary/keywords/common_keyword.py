@@ -115,11 +115,11 @@ class common_keyword():
             citizen_id = random_num + str(position_13)
         return citizen_id
 
-    def verify_two_numbers_equal(self,number1:int, number2:int):
-        if number1 == number2:
-            print(f"{number1} equal {number2}")
-        else:
-            raise AssertionError(f"{number1} not equal {number2}")
+    # def verify_two_numbers_equal(self,number1:int, number2:int):
+    #     if number1 == number2:
+    #         print(f"{number1} equal {number2}")
+    #     else:
+    #         raise AssertionError(f"{number1} not equal {number2}")
 
 #     # Get os platform 
 #     #     ...     \n either darwin (Mac) or window (Ex. Darwin -> darwin)

@@ -3,11 +3,11 @@ from os.path import abspath, dirname, join
 from setuptools import setup, find_packages
 
 CURDIR = dirname(abspath(__file__))
-
-with open(join(CURDIR, 'src', 'AscendQaCommonLibrary', '__init__.py')) as f:
-    VERSION = re.search('\n__version__ = "(.*)"', f.read()).group(1)
-with open(join(CURDIR, 'README.rst')) as f:
-    DESCRIPTION = f.read()
+VERSION = 1
+# with open(join(CURDIR, 'src', 'AscendQaCommonLibrary', '__init__.py')) as f:
+#     VERSION = re.search('\n__version__ = "(.*)"', f.read()).group(1)
+# with open(join(CURDIR, 'README.rst')) as f:
+#     DESCRIPTION = f.read()
 with open(join(CURDIR, 'requirements.txt')) as f:
     REQUIREMENTS = f.read().splitlines()
 
@@ -40,7 +40,5 @@ setup(
     url = 'https://gitlab.weomni.com/ascend-commerce/qa1/ascend-qa-common-keywords.git',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
-    install_requires=[
-        # List your library's dependencies here
-    ],
+    install_requires= REQUIREMENTS
 )

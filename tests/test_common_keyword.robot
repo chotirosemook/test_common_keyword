@@ -1,11 +1,11 @@
 *** Settings ***
-Resource    ${CURDIR}/../src/AscendQaCommonLibrary/imports.robot
-
+Resource    ${CURDIR}/../imports.resource
+Library        AscendQaCommonLibrary
 *** Variables ***
 ${lo_btn}    xpath=//a[@id='CRO-Hero-Button']
 
 *** Test Cases ***
-Log To console    ${CURDIR}
+# Log To console    ${CURDIR}
 # Test to Pass
 #     webKeywordlib.Verify two numbers equal by py            10    10
     # Verify two numbers equal by resource      10    10
@@ -21,7 +21,7 @@ Verify keywords to libs : random number
     Log To Console    ran_num : ${ran_num}
 
 Verify keywords to libs : random string
-    ${ran_str}=    common_keyword.Generate random string    5
+    ${ran_str}=    AscendQaCommonLibrary.Generate random string    5
     Log To Console    ran_str : ${ran_str}
 
 # Verify keywords to libs : get thai year

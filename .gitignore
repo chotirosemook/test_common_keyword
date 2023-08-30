@@ -1,0 +1,10 @@
+.vscode
+.DS_Store
+.txt
+.env
+*.png
+*.xml
+*.html
+*.pyc
+*.log
+*__pycache__/

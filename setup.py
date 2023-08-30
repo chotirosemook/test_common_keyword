@@ -11,26 +11,6 @@ exec(compile(open(VERSION).read(), VERSION, 'exec'))
 with open(join(CURDIR, 'requirements.txt')) as f:
     REQUIREMENTS = f.read().splitlines()
 
-# extra_math = [
-#     'returns-decorator',
-# ]
-# extra_bin = [
-#     *extra_math,
-# ]
-# extra_test = [
-#     *extra_math,
-#     'pytest>=4',
-#     'pytest-cov>=2',
-# ]
-# extra_dev = [
-#     *extra_test,
-# ]
-
-# extra_ci = [
-#     *extra_test,
-#     'python-coveralls',
-# ]
-
 setup(
     name='AscendQaCommonLibrary',
     version=VERSION,

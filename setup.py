@@ -3,11 +3,10 @@ from os.path import abspath, dirname, join
 from setuptools import setup, find_packages
 
 CURDIR = dirname(abspath(__file__))
-VERSION = 1
-# with open(join(CURDIR, 'src', 'AscendQaCommonLibrary', '__init__.py')) as f:
-#     VERSION = re.search('\n__version__ = "(.*)"', f.read()).group(1)
-# with open(join(CURDIR, 'README.rst')) as f:
-#     DESCRIPTION = f.read()
+with open(join(CURDIR, 'src', 'AscendQaCommonLibrary', '__init__.py')) as f:
+    VERSION = re.search('\n__version__ = "(.*)"', f.read()).group(1)
+with open(join(CURDIR, 'README.rst')) as f:
+    DESCRIPTION = f.read()
 with open(join(CURDIR, 'requirements.txt')) as f:
     REQUIREMENTS = f.read().splitlines()
 

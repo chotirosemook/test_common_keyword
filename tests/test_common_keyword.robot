@@ -73,18 +73,35 @@ Verify keywords to libs : Get os platform
     ${get_os_platform}=     AscendQaCommonLibrary.Get os platform
     Log To Console    get_os_platform : ${get_os_platform}
 
-# Verify keywords to libs : Get normalize path
-#     ${get_normalize_path}=     AscendQaCommonLibrary.Get normalize path    /home//user/Documents
-#     Log To Console    get_normalize_path : ${get_normalize_path}
+Verify keywords to libs : Get normalize path
+    ${get_normalize_path}=     AscendQaCommonLibrary.Get normalize path    /home//user/Documents
+    Log To Console    get_normalize_path : ${get_normalize_path}
 
 # Verify keywords to libs : PDF should contain
-#     ${pdf_should_contain}=     AscendQaCommonLibrary.PDF should contain    test_pdf.pdf   'Common T ypes of Cyber Attacks Cyber attacks are increasingly common,and some of the more advanced attacks can be launched without human intervention with the advent of network-based ransomware worms. What is a Cyber Attack? Definition of Cyber Attack: A cyber attack is when there is a deliberate and malicious attempt to breach the information system of an individual or organization. While there is usually an economic goal, some recent attacks show the destruction of data as a goal. Malicious actors often look for ransom or other kinds of economic gain, but attacks can be perpetrated with an array of motives, including political activism purposes.'
+#     ${pdf_should_contain}=     AscendQaCommonLibrary.PDF should contain    doc/test_pdf.pdf   'Common T ypes of Cyber Attacks Cyber attacks are increasingly common,and some of the more advanced attacks can be launched without human intervention with the advent of network-based ransomware worms. What is a Cyber Attack? Definition of Cyber Attack: A cyber attack is when there is a deliberate and malicious attempt to breach the information system of an individual or organization. While there is usually an economic goal, some recent attacks show the destruction of data as a goal. Malicious actors often look for ransom or other kinds of economic gain, but attacks can be perpetrated with an array of motives, including political activism purposes.'
 #     Log To Console    pdf_should_contain : ${pdf_should_contain}
 
 # Verify keywords to libs : Image should be visible on screen
 #     ${image_should_be_visible_on_screen}=     AscendQaCommonLibrary.Image should be visible on screen    /home/user/Documents    0.8
 #     Log To Console    image_should_be_visible_on_screen : ${image_should_be_visible_on_screen}
 
-# Verify keywords to libs : Wait until download is completed
-#     ${wait_until_download_is_completed}=     AscendQaCommonLibrary.Wait until download is completed    /home/user/Documents
-#     Log To Console    wait_until_download_is_completed : ${wait_until_download_is_completed}
+Verify keywords to libs : Wait until download is completed
+    ${wait_until_download_is_completed}=     AscendQaCommonLibrary.Wait until download is completed    /home/user/Documents
+    Log To Console    wait_until_download_is_completed : ${wait_until_download_is_completed}
+
+Verify keywords to libs : Write new row to excel file
+    ${write_new_row_to_excel_file}=     AscendQaCommonLibrary.Write new row to excel file    value    /doc/test_excel.xlsx
+
+Verify keywords to libs : Column in excel file should contains correct information
+    ${column_in_excel_file_should_contains_correct_information}=     AscendQaCommonLibrary.Column in excel file should contains correct information    /doc/test_excel.xlsx    value    1
+
+Verify keywords to libs : Column in exported excel file should exaclty match
+    ${column_in_exported_excel_file_should_exaclty_match}=     AscendQaCommonLibrary.Column in exported excel file should exaclty match    /doc/test_excel.xlsx    value    1
+
+# Verify keywords to libs : Get body and link from email
+#     ${get_body_and_link_from_email}=     AscendQaCommonLibrary.Get body and link from email    email    password    email_sender
+#     Log To Console    get_body_and_link_from_email : ${get_body_and_link_from_email}
+
+# Verify keywords to libs : Get email body
+#     ${get_email_body}=     AscendQaCommonLibrary.Get email body    email    password    email_sender
+#     Log To Console    get_email_body : ${get_email_body}

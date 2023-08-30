@@ -6,5 +6,6 @@
 *.xml
 *.html
 *.pyc
+*.pyc
 *.log
-*__pycache__/
+__pycache__/

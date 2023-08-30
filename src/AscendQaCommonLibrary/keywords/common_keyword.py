@@ -276,31 +276,9 @@ class common_keyword(LibraryComponent):
         for i in range(parts):
             ImapLibrary2().walk_multipart_email(index)
             content_type = ImapLibrary2().get_multipart_content_type
-            BuiltIn().continue_for_loop_if('${content-type}' != 'text/html')
-            payload = ImapLibrary2().get_multipart_payload(decode=True)
-            link = ImapLibrary2().get_links_from_email(index)
-        ImapLibrary2().delete_all_emails
-        ImapLibrary2().close_mailbox
-        links = GeneralUtils.decode_url(link)
-        return payload,links
-
-    #Get body and link from email
-    #     [Documentation]     get email body and link from any email providers using imaplibrary.
-    #     ...     \n filter using sender address   
-    #     ...     \n ``timeout`` how long in second you want to wait for the email
-    @keyword
-    def get_body_and_link_from_email(self,email,password,sender_address,timeout=60):
-        BuiltIn().wait_until_keyword_succeeds('40x','10s')
-        ImapLibrary2().open_mailbox('imap.gmail.com',email,password)
-        index = ImapLibrary2().wait_for_email(sender_address,'UNSEEN',timeout)
-        parts = ImapLibrary2().walk_multipart_email(index)
-        for i in range(parts):
-            ImapLibrary2().walk_multipart_email(index)
-            content_type = ImapLibrary2().get_multipart_content_type
             BuiltIn().continue_for_loop_if(content_type != 'text/html')
             payload = ImapLibrary2().get_multipart_payload(decode=True)
             link = ImapLibrary2().get_links_from_email(index)
-            content_type = ImapLibrary2().get_multipart_content_type
         ImapLibrary2().delete_all_emails
         ImapLibrary2().close_mailbox
         links = GeneralUtils.decode_url(link)

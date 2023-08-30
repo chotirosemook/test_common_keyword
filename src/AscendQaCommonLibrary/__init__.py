@@ -7,7 +7,7 @@ from .utils.AdbUtils import AdbUtils
 from .utils.AppiumUtils import AppiumUtils
 from robot.api.deco import keyword,not_keyword,library
 from AscendQaCommonLibrary.keywords import common_keyword
-from robotlibcore import DynamicCore
+
 __version__ = VERSION
 
 @library

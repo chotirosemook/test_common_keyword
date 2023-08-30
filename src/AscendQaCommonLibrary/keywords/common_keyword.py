@@ -30,9 +30,9 @@ from ImapLibrary2 import ImapLibrary2
 # BuiltIn().log_to_console(rand_letters)
 
 class common_keyword(LibraryComponent):
-    @keyword
-    def get_driver_instance(self):
-        return BuiltIn().get_library_instance('SeleniumLibrary')
+    # @keyword
+    # def get_driver_instance(self):
+    #     return BuiltIn().get_library_instance('SeleniumLibrary')
     
     # Get thai year from current AD year
     # ``year`` is AD year. ex. 2022 

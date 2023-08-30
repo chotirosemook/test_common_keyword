@@ -1,0 +1,1 @@
+robocop -A ./robocop/newRules.cfg --reports all || robocop -A ascend-qa-common-keywords/robocop/newRules.cfg --reports all

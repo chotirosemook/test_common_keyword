@@ -1,21 +1,21 @@
 from .common_keyword import common_keyword
-# from .common_keyword import get_driver_instance
-# from .common_keyword import get_thai_year
-# from .common_keyword import get_day_of_week_in_thai
-# from .common_keyword import get_thai_year
-# from .common_keyword import get_day_of_week_in_thai
-# from .common_keyword import generate_random_number
-# from .common_keyword import generate_random_string
-# from .common_keyword import random_thai_mobile_number
-# from .common_keyword import random_thai_citizen_id
-# from .common_keyword import verify_two_numbers_equal
-# from .common_keyword import get_os_platform
-# from .common_keyword import get_normalize_path
-# from .common_keyword import pdf_should_contain
-# from .common_keyword import image_should_be_visible_on_screen
-# from .common_keyword import wait_until_download_is_completed
-# from .common_keyword import write_new_row_to_excel_file
-# from .common_keyword import column_in_excel_file_should_contains_correct_information
-# from .common_keyword import column_in_exported_excel_file_should_exaclty_match
-# from .common_keyword import get_body_and_link_from_email
-# from .common_keyword import get_email_body
+from .common_keyword import get_driver_instance
+from .common_keyword import get_thai_year
+from .common_keyword import get_day_of_week_in_thai
+from .common_keyword import get_thai_year
+from .common_keyword import get_day_of_week_in_thai
+from .common_keyword import generate_random_number
+from .common_keyword import generate_random_string
+from .common_keyword import random_thai_mobile_number
+from .common_keyword import random_thai_citizen_id
+from .common_keyword import verify_two_numbers_equal
+from .common_keyword import get_os_platform
+from .common_keyword import get_normalize_path
+from .common_keyword import pdf_should_contain
+from .common_keyword import image_should_be_visible_on_screen
+from .common_keyword import wait_until_download_is_completed
+from .common_keyword import write_new_row_to_excel_file
+from .common_keyword import column_in_excel_file_should_contains_correct_information
+from .common_keyword import column_in_exported_excel_file_should_exaclty_match
+from .common_keyword import get_body_and_link_from_email
+from .common_keyword import get_email_body

@@ -11,19 +11,19 @@ from robotlibcore import DynamicCore
 __version__ = VERSION
 
 @library
-class AscendQaCommonLibrary(DynamicCore):
-# class AscendQaCommonLibrary(common_keyword,DateUtils,GeneralUtils,ImageUtils,JsonUtils,AdbUtils,AppiumUtils):
+# class AscendQaCommonLibrary(DynamicCore):
+class AscendQaCommonLibrary(common_keyword,DateUtils,GeneralUtils,ImageUtils,JsonUtils,AdbUtils,AppiumUtils):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = __version__
 
     def __init__(self):
-        libraries = [
-            common_keyword(self),
-            DateUtils(),
-            GeneralUtils(),
-            ImageUtils(),
-            JsonUtils(),
-            AdbUtils(),
-            AppiumUtils()
-        ]
-        DynamicCore.__init__(self, libraries)
+        # libraries = [
+        #     common_keyword(self),
+        #     DateUtils(),
+        #     GeneralUtils(),
+        #     ImageUtils(),
+        #     JsonUtils(),
+        #     AdbUtils(),
+        #     AppiumUtils()
+        # ]
+        # DynamicCore.__init__(self, libraries)

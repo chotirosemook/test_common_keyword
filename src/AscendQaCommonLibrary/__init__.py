@@ -11,8 +11,6 @@ from .keywords.common_keyword import common_keyword
 __version__ = VERSION
 
 @library
-# class AscendQaCommonLibrary(common_keyword,DateUtils,GeneralUtils,ImageUtils,JsonUtils,AdbUtils,AppiumUtils):
-class AscendQaCommonLibrary(common_keyword):
-# class AscendQaCommonLibrary():
+class AscendQaCommonLibrary(common_keyword,DateUtils,GeneralUtils,ImageUtils,JsonUtils,AdbUtils,AppiumUtils):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = __version__

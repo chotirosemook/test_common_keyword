@@ -16,8 +16,8 @@ import sys
 from PyPDF2 import PdfReader
 # from AscendQaCommonLibrary.utils import ImageUtils
 # from AscendQaCommonLibrary.utils import GeneralUtils
-from AscendQaCommonLibrary.utils.GeneralUtils import GeneralUtils
-from AscendQaCommonLibrary.utils.ImageUtils import ImageUtils
+# from AscendQaCommonLibrary.utils.GeneralUtils import GeneralUtils
+# from AscendQaCommonLibrary.utils.ImageUtils import ImageUtils
 
 from datetime import datetime
 from openpyxl import Workbook , load_workbook

@@ -19,11 +19,11 @@ class AscendQaCommonLibrary(DynamicCore):
     def __init__(self):
         libraries = [
             common_keyword(self),
-            DateUtils(self),
-            GeneralUtils(self),
-            ImageUtils(self),
-            JsonUtils(self),
-            AdbUtils(self),
-            AppiumUtils(self)
+            DateUtils(),
+            GeneralUtils(),
+            ImageUtils(),
+            JsonUtils(),
+            AdbUtils(),
+            AppiumUtils()
         ]
         DynamicCore.__init__(self, libraries)

@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 CURDIR = dirname(abspath(__file__))
 
 with open(join(CURDIR, 'src', 'AscendQaCommonLibrary', '__init__.py')) as f:
-#     VERSION = re.search('\n__version__ = "(.*)"', f.read()).group(1)
+    VERSION = re.search('\n__version__ = "(.*)"', f.read()).group(1)
 # VERSION = '0.0.1'
 # with open(join(CURDIR, 'README.rst')) as f:
 #     DESCRIPTION = f.read()

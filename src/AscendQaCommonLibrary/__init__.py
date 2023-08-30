@@ -12,6 +12,7 @@ __version__ = VERSION
 
 @library
 # class AscendQaCommonLibrary(common_keyword,DateUtils,GeneralUtils,ImageUtils,JsonUtils,AdbUtils,AppiumUtils):
-class AscendQaCommonLibrary():
+class AscendQaCommonLibrary(common_keyword):
+# class AscendQaCommonLibrary():
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = __version__

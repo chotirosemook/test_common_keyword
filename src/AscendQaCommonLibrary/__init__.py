@@ -17,13 +17,13 @@ class AscendQaCommonLibrary(common_keyword,DateUtils,GeneralUtils,ImageUtils,Jso
     ROBOT_LIBRARY_VERSION = __version__
 
     def __init__(self):
-        # libraries = [
-        #     common_keyword(self),
-        #     DateUtils(),
-        #     GeneralUtils(),
-        #     ImageUtils(),
-        #     JsonUtils(),
-        #     AdbUtils(),
-        #     AppiumUtils()
-        # ]
-        # DynamicCore.__init__(self, libraries)
+        libraries = [
+            common_keyword(self),
+            DateUtils(),
+            GeneralUtils(),
+            ImageUtils(),
+            JsonUtils(),
+            AdbUtils(),
+            AppiumUtils()
+        ]
+        DynamicCore.__init__(self, libraries)

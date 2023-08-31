@@ -11,10 +11,11 @@ Library        ImapLibrary2
 Library        BrowserMobProxyLibrary
 Library        JSONLibrary
 Library        AscendQaCommonLibrary
-Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/AppiumUtils.py
-# Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/DateUtils.py
-Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/ImageUtils.py
-Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/JsonUtils.py
-Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/GeneralUtils.py
-Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/AdbUtils.py
-Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/AppiumUtils.py
+# for submodule
+Library        ${CURDIR}/keywords/utils/AppiumUtils.py
+Library        ${CURDIR}/keywords/utils/DateUtils.py
+Library        ${CURDIR}/keywords/utils/ImageUtils.py
+Library        ${CURDIR}/keywords/utils/JsonUtils.py
+Library        ${CURDIR}/keywords/utils/GeneralUtils.py
+Library        ${CURDIR}/keywords/utils/AdbUtils.py
+Library        ${CURDIR}/keywords/utils/AppiumUtils.py

@@ -301,8 +301,8 @@ class common_keyword(LibraryComponent):
         ImapLibrary2().close_mailbox
         return text_replace
 
-if __name__ == "__main__":
-    # webKeyword.lib_click_visible_element('id="CRO-Hero-Button"')
-    print("__main__")
-    # print(f"{keywords}")
-    # print(f"{keywords.Get WebElement()}")
+# if __name__ == "__main__":
+#     # webKeyword.lib_click_visible_element('id="CRO-Hero-Button"')
+#     print("__main__")
+#     # print(f"{keywords}")
+#     # print(f"{keywords.Get WebElement()}")

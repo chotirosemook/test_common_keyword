@@ -2,9 +2,9 @@
 Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
-Resource    web/webKeyword.robot
+Resource    keywords/web/webKeyword.robot
 # Suite Teardown     Close Browser
-Resource    ${CURDIR}/imports.robot
+Resource    ${CURDIR}/../imports.resource
 
 *** Variable ***
 ${url_facebook}        https://www.facebook.com

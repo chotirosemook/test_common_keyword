@@ -28,6 +28,9 @@ Verify keywords to libs : get thai year
     Log To Console    thai_year : ${thai_year}
 
 Verify keywords to libs : get day of week in thai
+    ${sunday_low}=    AscendQaCommonLibrary.Get day of week in thai    sunday
+    Log To Console    sunday : ${sunday_low}
+
     ${Sunday}=    AscendQaCommonLibrary.Get day of week in thai    Sunday
     Log To Console    Sunday : ${Sunday}
 

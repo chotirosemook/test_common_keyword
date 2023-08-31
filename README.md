@@ -94,3 +94,4 @@ If you have run out of energy or time for your project, put a note at the top of
 # For AscendQaCommonLibrary
 Command for install AscendQaCommonLibrary
 pip3 install git+https://gitlab.weomni.com/ascend-commerce/qa1/ascend-qa-common-keywords.git#egg=AscendQaCommonLibrary
+pip3 install git+https://gitlab.weomni.com/ascend-commerce/qa1/ascend-qa-common-keywords.git

@@ -47,20 +47,21 @@ class common_keyword(LibraryComponent):
     # ``day``  as Sunday will return `อาทิตย์`
     @keyword
     def get_day_of_week_in_thai(self,day:string):
+        day = day.lower()
         date_thai = ''
-        if    day == 'Sunday':
+        if    day == 'sunday':
             date_thai =  'อาทิตย์'
-        elif    day == 'Monday':
+        elif    day == 'monday':
             date_thai = 'จันทร์'
-        elif    day == 'Tuesday':
+        elif    day == 'tuesday':
             date_thai =  'อังคาร'
-        elif    day == 'Wednesday':
+        elif    day == 'wednesday':
             date_thai = 'พุธ'
-        elif    day == 'Thursday':
+        elif    day == 'thursday':
             date_thai =  'พฤหัสบดี'
-        elif    day == 'Friday':
+        elif    day == 'friday':
             date_thai = 'ศุกร์'
-        elif    day == 'Saturday':
+        elif    day == 'saturday':
             date_thai = 'เสาร์'
 
         return date_thai

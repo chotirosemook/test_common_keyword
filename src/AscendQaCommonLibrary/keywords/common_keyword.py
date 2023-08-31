@@ -225,7 +225,7 @@ class common_keyword(LibraryComponent):
     #\n ``excel_file_path`` absolute path to write the data into
     @keyword
     def write_new_row_to_excel_file(self,row_data_as_a_list,excel_file_path):
-        date = datetime.now()
+        date = datetime.datetime.now()
         wb = load_workbook(excel_file_path,date)
         ws = wb.active
         info_from_excel = ws.col(1)
@@ -242,7 +242,7 @@ class common_keyword(LibraryComponent):
     #     ...     \n ``column_to_read`` is an integer indicate column number to read
     @keyword
     def column_in_excel_file_should_contains_correct_information(self,excel_file_path,list_of_expected_information,column_to_read):
-        date = datetime.now()
+        date = datetime.datetime.now()
         wb = load_workbook(excel_file_path,date)
         ws = wb.active
         info_from_excel = ws.col(column_to_read)
@@ -256,7 +256,7 @@ class common_keyword(LibraryComponent):
     #     ...     \n ``column_to_read`` is an integer indicate column number to read
     @keyword
     def column_in_exported_excel_file_should_exaclty_match(self,excel_file_path,list_of_expected_information,column_to_read):
-        date = datetime.now()
+        date = datetime.datetime.now()
         wb = load_workbook(excel_file_path,date)
         print(wb)
         ws = wb.active
@@ -296,7 +296,7 @@ class common_keyword(LibraryComponent):
         ImapLibrary2().open_mailbox('imap.gmail.com',email,password)
         index = ImapLibrary2().wait_for_email(sender_address,'UNSEEN',timeout)
         text = ImapLibrary2().get_email_body(index)
-        text_replace = text.replace('\n',empty)
+        text_replace = text.replace('\n','')
         ImapLibrary2().delete_all_emails
         ImapLibrary2().close_mailbox
         return text_replace
@@ -304,6 +304,5 @@ class common_keyword(LibraryComponent):
 if __name__ == "__main__":
     # webKeyword.lib_click_visible_element('id="CRO-Hero-Button"')
     print("__main__")
-    # BuiltIn().log_to_console(datetime.now())
     # print(f"{keywords}")
     # print(f"{keywords.Get WebElement()}")

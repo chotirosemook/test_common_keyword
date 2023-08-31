@@ -32,6 +32,8 @@ class DateUtils():
            EX. 05 พ.ค 2564
         """
         today = datetime.today()
+        print(datetime)
+        print(today)
         date  = today + timedelta(days=plusdate)
 
         if with_leading_zero and date.day in range(1,10):

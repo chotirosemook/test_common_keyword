@@ -54,16 +54,16 @@ Verify keywords to libs : random thai mobile number
     Log To Console    mobile_number : ${mobile_number}
 
 Verify keywords to libs : Get number of days in month
-    ${number_of_days_in_month}=    DateUtils.Get number of days in month
-    Log To Console    number_of_days_in_month : ${number_of_days_in_month}
+    ${get_number_of_days_in_month}=    AscendQaCommonLibrary.Get number of days in month
+    Log To Console    get_number_of_days_in_month : ${get_number_of_days_in_month}
 
 Verify keywords to libs : Get days remaining in current month
-    ${number_of_days_left_in_month}=     DateUtils.Get days remaining in current month
-    Log To Console    number_of_days_left_in_month : ${number_of_days_left_in_month}
+    ${get_days_remaining_in_current_month}=     AscendQaCommonLibrary.Get days remaining in current month
+    Log To Console    get_days_remaining_in_current_month : ${get_days_remaining_in_current_month}
 
-# Verify keywords to libs : Get current date and short month in thai
-#     ${current_date_and_short_month_in_thai}=    DateUtils.Get current date and short month in thai
-#     Log To Console    current_date_and_short_month_in_thai : ${current_date_and_short_month_in_thai}
+Verify keywords to libs : Get current date and short month in thai
+    ${current_date_and_short_month_in_thai}=    AscendQaCommonLibrary.Get current date and short month in thai
+    Log To Console    current_date_and_short_month_in_thai : ${current_date_and_short_month_in_thai}
 
 Verify keywords to libs : Random thai citizen id
     ${random_thai_citizen_id}=     AscendQaCommonLibrary.Random thai citizen id
@@ -90,13 +90,13 @@ Verify keywords to libs : Wait until download is completed
     Log To Console    wait_until_download_is_completed : ${wait_until_download_is_completed}
 
 Verify keywords to libs : Write new row to excel file
-    ${write_new_row_to_excel_file}=     AscendQaCommonLibrary.Write new row to excel file    value    /doc/test_excel.xlsx
+    ${write_new_row_to_excel_file}=     AscendQaCommonLibrary.Write new row to excel file    value    /doc/excel
 
 Verify keywords to libs : Column in excel file should contains correct information
-    ${column_in_excel_file_should_contains_correct_information}=     AscendQaCommonLibrary.Column in excel file should contains correct information    /doc/test_excel.xlsx    value    1
+    ${column_in_excel_file_should_contains_correct_information}=     AscendQaCommonLibrary.Column in excel file should contains correct information    /doc/excel    value    1
 
 Verify keywords to libs : Column in exported excel file should exaclty match
-    ${column_in_exported_excel_file_should_exaclty_match}=     AscendQaCommonLibrary.Column in exported excel file should exaclty match    /doc/test_excel.xlsx    value    1
+    ${column_in_exported_excel_file_should_exaclty_match}=     AscendQaCommonLibrary.Column in exported excel file should exaclty match    /doc/excel    value    1
 
 # Verify keywords to libs : Get body and link from email
 #     ${get_body_and_link_from_email}=     AscendQaCommonLibrary.Get body and link from email    email    password    email_sender

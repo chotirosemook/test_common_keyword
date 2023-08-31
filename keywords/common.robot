@@ -149,7 +149,7 @@ Get body and link from email
     ${links}=    GeneralUtils.decode_url   ${link}
     [Return]    ${payload}  ${links}
 
-Get  body
+Get email body
     [Documentation]     get email body from any email providers using imaplibrary.
     ...    \n filter using sender address
     ...    \n ``timeout`` how long in second you want to wait for the email      

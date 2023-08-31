@@ -12,7 +12,7 @@ Library        BrowserMobProxyLibrary
 Library        JSONLibrary
 Library        AscendQaCommonLibrary
 Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/AppiumUtils.py
-Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/DateUtils.py
+# Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/DateUtils.py
 Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/ImageUtils.py
 Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/JsonUtils.py
 Library        ${CURDIR}/src/AscendQaCommonLibrary/utils/GeneralUtils.py

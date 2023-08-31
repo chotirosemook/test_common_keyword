@@ -86,7 +86,7 @@ Verify keywords to libs : Get normalize path
 #     Log To Console    image_should_be_visible_on_screen : ${image_should_be_visible_on_screen}
 
 Verify keywords to libs : Wait until download is completed
-    ${wait_until_download_is_completed}=     AscendQaCommonLibrary.Wait until download is completed    /home/user/Documents
+    ${wait_until_download_is_completed}=     AscendQaCommonLibrary.Wait until download is completed    /doc
     Log To Console    wait_until_download_is_completed : ${wait_until_download_is_completed}
 
 Verify keywords to libs : Write new row to excel file

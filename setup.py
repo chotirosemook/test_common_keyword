@@ -16,7 +16,6 @@ setup(
     version=VERSION,
     description='Ascend qa common library',
     author='Ascend Commerce',
-    author_email='your@email.com',
     url = 'https://gitlab.weomni.com/ascend-commerce/qa1/ascend-qa-common-keywords.git',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},

@@ -31,7 +31,7 @@ class DateUtils():
 
            EX. 05 พ.ค 2564
         """
-        today = datetime.datetime.now()
+        today = datetime.now()
         print(datetime)
         print(today)
         date  = today + timedelta(days=plusdate)
@@ -56,7 +56,7 @@ class DateUtils():
         if year and month:
             number_of_days_in_month = calendar.monthrange(year, month)[1]
         else:
-            now = datetime.datetime.now()
+            now = datetime.now()
             number_of_days_in_month = calendar.monthrange(now.year, now.month)[1]
         
         print(number_of_days_in_month)
@@ -64,6 +64,6 @@ class DateUtils():
     
     @keyword()
     def get_days_remaining_in_current_month(self):
-        now = datetime.datetime.now()
+        now = datetime.now()
         number_of_days_in_month = calendar.monthrange(now.year, now.month)[1]
         return int(number_of_days_in_month-now.day)

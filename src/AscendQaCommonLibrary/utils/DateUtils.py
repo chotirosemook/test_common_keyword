@@ -31,7 +31,7 @@ class DateUtils():
 
            EX. 05 พ.ค 2564
         """
-        today = datetime.now()
+        today = datetime.datetime.now()
         print(datetime)
         print(today)
         date  = today + timedelta(days=plusdate)

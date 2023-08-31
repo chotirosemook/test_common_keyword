@@ -224,7 +224,7 @@ class common_keyword(LibraryComponent):
     #\n ``excel_file_path`` absolute path to write the data into
     @keyword
     def write_new_row_to_excel_file(self,row_data_as_a_list,excel_file_path):
-        date = int(datetime.now())
+        date = datetime.now()
         wb = load_workbook(excel_file_path,date)
         ws = wb.active
         info_from_excel = ws.col(1)
@@ -241,7 +241,7 @@ class common_keyword(LibraryComponent):
     #     ...     \n ``column_to_read`` is an integer indicate column number to read
     @keyword
     def column_in_excel_file_should_contains_correct_information(self,excel_file_path,list_of_expected_information,column_to_read):
-        date = int(datetime.now())
+        date = datetime.now()
         wb = load_workbook(excel_file_path,date)
         ws = wb.active
         info_from_excel = ws.col(column_to_read)
@@ -255,10 +255,12 @@ class common_keyword(LibraryComponent):
     #     ...     \n ``column_to_read`` is an integer indicate column number to read
     @keyword
     def column_in_exported_excel_file_should_exaclty_match(self,excel_file_path,list_of_expected_information,column_to_read):
-        date = int(datetime.now())
+        date = datetime.now()
         wb = load_workbook(excel_file_path,date)
+        print(wb)
         ws = wb.active
         info_from_excel = ws.col(column_to_read)
+        print(info_from_excel)
         Collections.lists_should_be_equal(info_from_excel,list_of_expected_information)
         wb.close()
 

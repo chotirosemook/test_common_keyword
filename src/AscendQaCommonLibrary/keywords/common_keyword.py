@@ -48,6 +48,8 @@ class common_keyword(LibraryComponent):
     @keyword
     def get_day_of_week_in_thai(self,day:string):
         day = day.lower()
+        BuiltIn().log_to_console(day.lower())
+        BuiltIn().log_to_console(day)
         date_thai = ''
         if    day == 'sunday':
             date_thai =  'อาทิตย์'

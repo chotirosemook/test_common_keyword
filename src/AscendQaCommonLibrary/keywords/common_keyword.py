@@ -47,7 +47,9 @@ class common_keyword(LibraryComponent):
     # ``day``  as Sunday will return `อาทิตย์`
     @keyword
     def get_day_of_week_in_thai(self,day:string):
+        print(day)
         day = day.lower()
+        print(day)
         BuiltIn().log_to_console(day.lower())
         BuiltIn().log_to_console(day)
         date_thai = ''
@@ -304,8 +306,16 @@ class common_keyword(LibraryComponent):
         ImapLibrary2().close_mailbox
         return text_replace
 
-# if __name__ == "__main__":
-#     # webKeyword.lib_click_visible_element('id="CRO-Hero-Button"')
-#     print("__main__")
-#     # print(f"{keywords}")
-#     # print(f"{keywords.Get WebElement()}")
+    def main(self):
+        # data = "My data read from the Web"
+        # print(data)
+        # modified_data = process_data(data)
+        # print(modified_data)
+        modified_data = self.get_day_of_week_in_thai('sunday')
+        print(modified_data)
+if __name__ == "__main__":
+    # webKeyword.lib_click_visible_element('id="CRO-Hero-Button"')
+    print("__main__")
+    # main()
+    # print(f"{keywords}")
+    # print(f"{keywords.Get WebElement()}")
